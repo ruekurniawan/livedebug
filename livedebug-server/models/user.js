@@ -46,6 +46,7 @@ const userSchema = new Schema({
 
 userSchema.pre('save', function(next) {
   this.password = register.hashPassword(this.password);
+  // register.generateNum
   this.verificationCode = register.generateNum(6);
   next()
 })

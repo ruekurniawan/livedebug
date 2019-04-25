@@ -64,9 +64,9 @@ after(done => {
    .deleteMany({}, () => { done() });
 })
 
-describe('Account', function() {
+describe.only('Account', function() {
   describe('POST /accounts/new ', function() {
-    it('should return status code 201 with response body created account', function(done) {
+    it.only('should return status code 201 with response body created account', function(done) {
       let account = {
         balance: 350000
       }

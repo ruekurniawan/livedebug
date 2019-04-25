@@ -23,7 +23,7 @@ describe('Users', function() {
         email: 'kosasih@mail.com',
         password: 'kosasihberjalankiankemari',
       }
-
+      
       chai
        .request(app)
        .post(`/register`)

@@ -12,7 +12,8 @@ import Navigation from '@/components/Navigation'
 export default {
   data () {
     return {
-      favorites: []
+      favorites: [],
+      myFavorite: null
     }
   },
 

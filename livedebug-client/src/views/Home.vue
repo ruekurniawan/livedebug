@@ -21,7 +21,7 @@
       </div>
     </div>
 
-    <routing-view @myFavorite="myFavorite"/>
+    <router-view @myFavorite="myFavorite"/>
   </div>
 </template>
 
@@ -31,7 +31,7 @@ import User from '@/components/User.vue'
 
 export default {
   name: 'home',
-
+  
   data () {
     return {
       isLoading: true
@@ -63,9 +63,8 @@ export default {
   },
 
   mounted () {
-    this.fetchUser().then(data => {
-      this.isLoading = false
-    })
+    this.fetchUser()
+    // this.isLoading = false
   }
 }
 </script>
